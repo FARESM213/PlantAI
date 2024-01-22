@@ -12,7 +12,7 @@ import os
 from azure.storage.blob import BlobServiceClient
 
 connect_str = "DefaultEndpointsProtocol=https;AccountName=stockagemodel;AccountKey=07kKsQiv6rWRfehHJ85CZPtF22UIffhvN5dHkv8ZpICq2mJABmL8G9XVJOQH8zRSxo+2vblw5Nw0+AStkw56cA==;EndpointSuffix=core.windows.net"
-container_name = "stockagemodel"
+container_name = "firstcontainer"
 blob_name = "Model.h5"
 file_path = "./Model.h5"
 
