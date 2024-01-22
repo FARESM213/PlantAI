@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification des Maladies des Plantes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<script src="/static/script.js"></script>
+
+<body>
+    <div id="container">
+        <h1>Plant AI</h1>
+        
+        <div id="upload-section">
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="file-upload" name="file" accept="image/*" onchange="previewFile()">
+                <label for="file-upload" class="custom-file-button">Choisir une image</label>
+                <input type="button" value="Classer la Plante" onclick="predictDisease()">   
+            </form>
+        </div>
+
+        <div class="image-container">
+            <img id="image-preview" src="" alt="Aperçu de l'image" style="max-width: 60%; display: none;">
+        </div>
+        
+        <div id="response"></div>
+
+        <div id="questions" style="display: none;">
+            <a class="premium-feature" id="chat-link">
+                <i class="fa fa-crown"></i> En discuter avec le bot
+            </a>
+        </div>        
+        
+    </div>
+</body>
+
+</html>
+
