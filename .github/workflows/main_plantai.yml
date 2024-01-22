@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'PlantAI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_09501C90887A4A829B57F16C0B7FBEAE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_378FFECEEBE148829CBF06271303084C }}
