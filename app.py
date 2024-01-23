@@ -8,6 +8,7 @@ import re
 from dotenv import load_dotenv
 from openai import OpenAI
 import os
+import requests
 
 from azure.storage.blob import BlobServiceClient
 
@@ -89,6 +90,42 @@ def predict():
     except Exception as e:
         return str(e), 500
 
+
+def encode_image_to_base64(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
+
+@app.route('/predict2/', methods=['POST'])
+def predict2():
+    try:
+        # Lire l'image envoyée par l'utilisateur
+        file = request.files['file']
+        in_memory_file = io.BytesIO()
+        file.save(in_memory_file)
+        data = in_memory_file.getvalue()
+        encoded_image = base64.b64encode(data).decode('utf-8')
+
+        # Informations à envoyer
+        url = 'https://plant.id/api/v3/identification'
+        headers = {
+            'Api-Key': 'Votre-Clé-API',
+            'Content-Type': 'application/json'
+        }
+        body = {
+            'images': [encoded_image],
+            'latitude': 48.866,  # Paris
+            'longitude': 2.333,  # Paris
+            'similar_images': True,
+            'health': 'all'
+        }
+
+        # Envoyer la requête
+        response = requests.post(url, json=body, headers=headers)
+        return response.json()
+
+    except Exception as e:
+        return jsonify({'error': str(e)})
+    
 #response = client.chat.completions.create( ....
 
 if __name__ == '__main__':

@@ -79,6 +79,32 @@ function predictDisease() {
 }
 
 
+function predictDisease2() {
+    var fileInput = document.getElementById('file-upload').files[0];
+    if (fileInput) {
+        var formData = new FormData();
+        formData.append('file', fileInput);
+
+        fetch('/predict2/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Traiter la réponse du serveur Flask ici
+            console.log(data);
+            // Afficher les résultats dans votre page web
+        })
+        .catch(error => {
+            console.error('Erreur lors de la soumission de l\'image: ', error);
+        });
+    } else {
+        alert("Veuillez télécharger une image.");
+    }
+}
+
+
+
 function encrypt(text) {
     var result = "";
     for (var i = 0; i < text.length; i++) {
