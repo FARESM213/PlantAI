@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import os
 import requests
-
 from azure.storage.blob import BlobServiceClient
 
 connect_str = "DefaultEndpointsProtocol=https;AccountName=stockagemodel;AccountKey=07kKsQiv6rWRfehHJ85CZPtF22UIffhvN5dHkv8ZpICq2mJABmL8G9XVJOQH8zRSxo+2vblw5Nw0+AStkw56cA==;EndpointSuffix=core.windows.net"
@@ -20,8 +19,12 @@ file_path = "./Model.h5"
 blob_service_client = BlobServiceClient.from_connection_string(connect_str)
 blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
 
-with open(file_path, "wb") as download_file:
-    download_file.write(blob_client.download_blob().readall())
+if not os.path.exists(file_path):
+    blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+    blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
+
+    with open(file_path, "wb") as download_file:
+        download_file.write(blob_client.download_blob().readall())
 
 load_dotenv()
 #client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) ##
@@ -108,7 +111,7 @@ def predict2():
         # Informations à envoyer
         url = 'https://plant.id/api/v3/identification'
         headers = {
-            'Api-Key': 'Votre-Clé-API',
+            'Api-Key': 'f9hqDGhZLxY48orHhoGZWRqmOvMZYGTp6uMh0SSDqs1wGmQmep',
             'Content-Type': 'application/json'
         }
         body = {
