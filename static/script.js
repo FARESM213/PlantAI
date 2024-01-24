@@ -15,6 +15,31 @@ function previewFile() {
         preview.style.display = 'none';
     }
 }
+
+
+
+function createAssistant(predictedClass) {
+    fetch('/create_assistant/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ predictedClass: predictedClass })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.assistant_id) {
+            console.log('Assistant ID:', data.assistant_id);
+        } else {
+            console.error('Erreur lors de la création de l\'assistant:', data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Erreur lors de la requête:', error);
+    });
+}
+
+
 // Fonction pour formater la classe prédite
 function formatPredictedClass(predictedClass) {
     // Remplacez chaque '_' par un espace
@@ -49,6 +74,7 @@ function sendData(input) {
 
         // Crypter la valeur formatée avant de l'ajouter à l'URL 
         var encryptedValue = encrypt(formattedPredictedClass);
+        createAssistant(data.predicted_class)
         document.getElementById("chat-link").href = `/chat?predictedClass=${encryptedValue}`;
 
         var htmlContent = '<h2>Résultats de Prédiction</h2>';
@@ -78,7 +104,6 @@ function predictDisease() {
     }
 }
 
-
 function predictDisease2() {
     var fileInput = document.getElementById('file-upload').files[0];
     if (fileInput) {
@@ -89,20 +114,39 @@ function predictDisease2() {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            // Traiter la réponse du serveur Flask ici
-            console.log(data);
-            // Afficher les résultats dans votre page web
-        })
-        .catch(error => {
-            console.error('Erreur lors de la soumission de l\'image: ', error);
-        });
+            .then(response => response.json())
+            .then(data => {
+                var responseContainer = document.getElementById('response');
+                responseContainer.innerHTML = ''; // Effacer l'ancienne réponse
+
+                if (data.result.is_plant.binary === true) {
+                    var encryptedValue = encrypt(data.result.classification.suggestions[0].name);
+                    document.getElementById("chat-link").href = `/chat?predictedClass=${encryptedValue}`;
+                    createAssistant(data.result.classification.suggestions[0].name)
+
+                    var htmlContent = '<h2>Résultats de Prédiction</h2>';
+                    htmlContent += '<p><strong>Classe prédite :</strong> ' + '<i>' + data.result.classification.suggestions[0].name + '</i></p>';
+                    htmlContent += '<h3> Prédictions :</h3><ul>';
+
+                    data.result.disease.suggestions.forEach(suggestion => {
+                        htmlContent += '<li><i> ' + suggestion.name + '</i> ( <strong>Probability: </strong>' + suggestion.probability + ')</li>';
+                    });
+
+                    htmlContent += '</ul>';
+                    responseContainer.innerHTML = htmlContent;
+                    document.getElementById('questions').style.display = 'block';
+                } else {
+                    var htmlContent = '<h2>Ceci n\'est pas une plante</h2>';
+                    responseContainer.innerHTML = htmlContent;
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la soumission de l\'image: ', error);
+            });
     } else {
         alert("Veuillez télécharger une image.");
     }
 }
-
 
 
 function encrypt(text) {
