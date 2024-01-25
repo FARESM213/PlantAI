@@ -18,13 +18,13 @@ function previewFile() {
 
 
 
-function createAssistant(predictedClass) {
+function createAssistant() {
     fetch('/create_assistant/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ predictedClass: predictedClass })
+        body:{}
     })
     .then(response => response.json())
     .then(data => {
@@ -74,7 +74,7 @@ function sendData(input) {
 
         // Crypter la valeur formatée avant de l'ajouter à l'URL 
         var encryptedValue = encrypt(formattedPredictedClass);
-        createAssistant(data.predicted_class)
+        createAssistant()
         document.getElementById("chat-link").href = `/chat?predictedClass=${encryptedValue}`;
 
         var htmlContent = '<h2>Résultats de Prédiction</h2>';
@@ -118,17 +118,18 @@ function predictDisease2() {
             .then(data => {
                 var responseContainer = document.getElementById('response');
                 responseContainer.innerHTML = ''; // Effacer l'ancienne réponse
-
-                if (data.result.is_plant.binary === true) {
-                    var encryptedValue = encrypt(data.result.classification.suggestions[0].name);
+                
+                if (data.identification.is_plant.binary === true) {
+                    var encryptedValue = encrypt(data.identification.classification.suggestions[0].name);
                     document.getElementById("chat-link").href = `/chat?predictedClass=${encryptedValue}`;
-                    createAssistant(data.result.classification.suggestions[0].name)
+
+                    createAssistant()
 
                     var htmlContent = '<h2>Résultats de Prédiction</h2>';
-                    htmlContent += '<p><strong>Classe prédite :</strong> ' + '<i>' + data.result.classification.suggestions[0].name + '</i></p>';
+                    htmlContent += '<p><strong>Plante prédite :</strong> ' + '<i>' + data.identification.classification.suggestions[0].name + '</i></p>';
                     htmlContent += '<h3> Prédictions :</h3><ul>';
 
-                    data.result.disease.suggestions.forEach(suggestion => {
+                    data.health.disease.suggestions.forEach(suggestion => {
                         htmlContent += '<li><i> ' + suggestion.name + '</i> ( <strong>Probability: </strong>' + suggestion.probability + ')</li>';
                     });
 

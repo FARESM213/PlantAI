@@ -11,6 +11,7 @@ import os
 import requests
 from azure.storage.blob import BlobServiceClient
 import time
+import json  # Assurez-vous d'importer le module json
 
 connect_str = "DefaultEndpointsProtocol=https;AccountName=stockagemodel;AccountKey=07kKsQiv6rWRfehHJ85CZPtF22UIffhvN5dHkv8ZpICq2mJABmL8G9XVJOQH8zRSxo+2vblw5Nw0+AStkw56cA==;EndpointSuffix=core.windows.net"
 container_name = "firstcontainer"
@@ -39,6 +40,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 thread_principal_id = None
 assistant_principal_id = None
+uploaded_file = None
 
 @app.route('/')
 def index_view():
@@ -86,6 +88,13 @@ def predict():
         }
         global thread_principal_id
         thread_principal_id = create_thread()
+        
+        formatted_json = json.dumps(response, indent=4)  # indent=4 pour une meilleure lisibilité
+
+        # Écrire le JSON formaté dans App_results.txt
+        with open('App_results.txt', 'w') as file:
+            file.write(formatted_json)
+
         return response
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -94,11 +103,13 @@ def encode_image_to_base64(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-@app.route('/predict2/', methods=['POST'])
+
+
+@app.route('/predict2/', methods=['POST','GET'])
 def predict2():
     try:
         # Lire l'image envoyée par l'utilisateur
-        file = request.files['file']
+        file = request.files['file'] 
         in_memory_file = io.BytesIO()
         file.save(in_memory_file)
         data = in_memory_file.getvalue()
@@ -107,34 +118,62 @@ def predict2():
         # Informations à envoyer
         url = 'https://plant.id/api/v3/identification'
         headers = {
-            'Api-Key': 'f9hqDGhZLxY48orHhoGZWRqmOvMZYGTp6uMh0SSDqs1wGmQmep',
+            'Api-Key': 'ix3mM5zBTaJEOJH2qvxmkSvOfQ0wbzi6xWSDwHQysixfUGQkxN',
             'Content-Type': 'application/json'
         }
         body = {
             'images': [encoded_image],
             'latitude': 48.866,  # Paris
             'longitude': 2.333,  # Paris
-            'similar_images': True,
-            'health': 'all'
+            'similar_images': True
         }
+
 
         global thread_principal_id
         thread_principal_id = create_thread()
-        response = requests.post(url, json=body, headers=headers)
-        return response.json()
+
+        response_identification = requests.post(url, json=body, headers=headers)
+        identification_result = response_identification.json().get('result', {})
+        formatted_identification = json.dumps(identification_result, indent=4)
+
+        with open('App_results.txt', 'w') as file:
+            file.write("Plant identification informations : \n "+formatted_identification)
+
+
+        url = 'https://plant.id/api/v3/health_assessment?language=fr&details=local_name,description,url,treatment,classification,common_names,cause'
+        headers = {
+            'Api-Key': 'ix3mM5zBTaJEOJH2qvxmkSvOfQ0wbzi6xWSDwHQysixfUGQkxN',
+            'Content-Type': 'application/json'
+        }
+        body = {
+            'images': [encoded_image],
+            'latitude': 48.866,  # Paris
+            'longitude': 2.333,  # Paris
+            'similar_images': True
+        }
+
+        response_health = requests.post(url, json=body, headers=headers)
+        health_result = response_health.json().get('result', {})
+        formatted_health = json.dumps(health_result, indent=4)
+
+        with open('App_results.txt', 'a') as file:
+            file.write("\n\n Plant Health informations : \n " + formatted_health)
+
+        return jsonify({
+            'identification': identification_result,
+            'health': health_result
+        })
 
     except Exception as e:
         return jsonify({'error': str(e)})
     
-
-
 def upload_file(file_uploaded):
+    global uploaded_file
     uploaded_file = client.files.create(
             file=open(file_uploaded, 'rb'),
             purpose='assistants',
         )
-    return uploaded_file
-     
+         
 def create_thread():
     thread = client.beta.threads.create()
     return thread.id
@@ -164,24 +203,21 @@ def run_func():
 
 @app.route('/create_assistant/', methods=['POST'])
 def create_assistant():
-    predicted_class = request.json['predictedClass']
-    instructions = str(generate_instructions(predicted_class))
+    global uploaded_file
+    upload_file("App_results.txt")
     try:
         assistant = client.beta.assistants.create(
-            name="Plant Expert",
-            instructions=instructions,
-            tools=[{"type": "retrieval"}],
-            model="gpt-4-1106-preview",
-        )
+        name="Plant Expert",
+        instructions= "En tant qu'assistant expert en plantes, vous êtes chargé d'aider les particuliers en agriculture autosuffisante, en particulier ceux avec des connaissances limitées en horticulture. Vous utilisez les données du fichier 'App_results.txt', qui contient des informations détaillées sur l'état des plantes de l'utilisateur, y compris l'identification des espèces et la détection des maladies par l'application au préalable. Votre rôle est de présenter ces informations de manière claire et accessible, en fournissant des conseils pratiques sur le traitement des maladies identifiées avec une préférence pour les méthodes naturelles et biologiques. Encouragez l'utilisateur à adopter des pratiques durables dans son jardin et guidez-le vers des ressources complémentaires pour approfondir ses connaissances. Favorisez l'interaction en répondant de manière dynamique aux questions spécifiques, et sollicitez des retours pour améliorer continuellement le service.",
+        tools=[{"type": "retrieval"}],
+        model="gpt-4-1106-preview",
+        file_ids=[uploaded_file.id]
+    )
         global assistant_principal_id
         assistant_principal_id = assistant.id
         return jsonify({'assistant_id': assistant_principal_id})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-    
-def generate_instructions(predicted_class):
-    return f"Vous êtes un assistant végétal français très utile. Initiez la conversation par la présentation des résultats : {predicted_class} ( n'hesite pas à arranger le texte et effectuer les modifications requises pour une présentation propre), ce fichier renferme les resultat d'une application de detection d'image de plante. Ensuite echangez avec l'utilisateur et si on vous le demande, expliquez comment prendre soin de la plante, identifiez le type de maladie dont elle pourrait souffrir et suggérez des façons de traiter ces maladies. Agissez comme un expert en plante humain.",
-
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)

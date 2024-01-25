@@ -1,0 +1,569 @@
+Plant identification informations : 
+ {
+    "is_plant": {
+        "probability": 0.9995254,
+        "binary": true,
+        "threshold": 0.5
+    },
+    "classification": {
+        "suggestions": [
+            {
+                "id": "d5d25f70440d18d2",
+                "name": "Rosa",
+                "probability": 0.39813772,
+                "similar_images": [
+                    {
+                        "id": "b4b7f60dcb846fddfdc46314caaa7235cf974594",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/b4b/7f60dcb846fddfdc46314caaa7235cf974594.jpeg",
+                        "similarity": 0.401,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/b4b/7f60dcb846fddfdc46314caaa7235cf974594.small.jpeg"
+                    },
+                    {
+                        "id": "9630da67c1451fd5d5ca2ac705dfa0621e29aa47",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/963/0da67c1451fd5d5ca2ac705dfa0621e29aa47.jpeg",
+                        "license_name": "CC BY 4.0",
+                        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                        "citation": "Yurii Basov",
+                        "similarity": 0.397,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/963/0da67c1451fd5d5ca2ac705dfa0621e29aa47.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "d5d25f70440d18d2"
+                }
+            },
+            {
+                "id": "8b670c5a7ed3aba9",
+                "name": "Quercus ilex",
+                "probability": 0.07749602,
+                "similar_images": [
+                    {
+                        "id": "276c3c389473d5806bfce490bcc3be84d7fb943d",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/276/c3c389473d5806bfce490bcc3be84d7fb943d.jpeg",
+                        "similarity": 0.295,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/276/c3c389473d5806bfce490bcc3be84d7fb943d.small.jpeg"
+                    },
+                    {
+                        "id": "b7010c9ad5f46a8e64c936ac88f0906ef23ef7a9",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/b70/10c9ad5f46a8e64c936ac88f0906ef23ef7a9.jpeg",
+                        "similarity": 0.264,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/b70/10c9ad5f46a8e64c936ac88f0906ef23ef7a9.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "8b670c5a7ed3aba9"
+                }
+            },
+            {
+                "id": "dcf39092de182ffc",
+                "name": "Malus domestica",
+                "probability": 0.07579618,
+                "similar_images": [
+                    {
+                        "id": "f0b042a58b9e7daaae3cb7ec1f514baae005a375",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/f0b/042a58b9e7daaae3cb7ec1f514baae005a375.jpeg",
+                        "similarity": 0.431,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/f0b/042a58b9e7daaae3cb7ec1f514baae005a375.small.jpeg"
+                    },
+                    {
+                        "id": "c6b05482fd67e8c57fd5d2d9d59acdf7c229cda4",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c6b/05482fd67e8c57fd5d2d9d59acdf7c229cda4.jpeg",
+                        "license_name": "CC BY 4.0",
+                        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                        "citation": "Patrick Hacker",
+                        "similarity": 0.378,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c6b/05482fd67e8c57fd5d2d9d59acdf7c229cda4.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "dcf39092de182ffc"
+                }
+            },
+            {
+                "id": "cf0cb0271d472795",
+                "name": "Prunus cerasifera",
+                "probability": 0.07430818,
+                "similar_images": [
+                    {
+                        "id": "e5b48d704edca39ee7550a3adb33bd43890a1b2b",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e5b/48d704edca39ee7550a3adb33bd43890a1b2b.jpeg",
+                        "similarity": 0.428,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e5b/48d704edca39ee7550a3adb33bd43890a1b2b.small.jpeg"
+                    },
+                    {
+                        "id": "e623d8dcb913636c1213e874742991218da10fcd",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e62/3d8dcb913636c1213e874742991218da10fcd.jpeg",
+                        "license_name": "CC BY 4.0",
+                        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                        "citation": "Emmanuel Torquebiau",
+                        "similarity": 0.336,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e62/3d8dcb913636c1213e874742991218da10fcd.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "cf0cb0271d472795"
+                }
+            },
+            {
+                "id": "bfacf8027d2c0bbf",
+                "name": "Ulmus",
+                "probability": 0.05420994,
+                "similar_images": [
+                    {
+                        "id": "af27811d686c08c707120d5a9cc057f0b5c80f33",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/af2/7811d686c08c707120d5a9cc057f0b5c80f33.jpg",
+                        "license_name": "CC BY 4.0",
+                        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                        "citation": "Nathan Odgers",
+                        "similarity": 0.393,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/af2/7811d686c08c707120d5a9cc057f0b5c80f33.small.jpg"
+                    },
+                    {
+                        "id": "29d7d00ad0175cb7d283fb671ea1f86d2f254f5e",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/29d/7d00ad0175cb7d283fb671ea1f86d2f254f5e.jpeg",
+                        "license_name": "CC BY 4.0",
+                        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                        "citation": "Bob Schwartz",
+                        "similarity": 0.342,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/29d/7d00ad0175cb7d283fb671ea1f86d2f254f5e.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "bfacf8027d2c0bbf"
+                }
+            },
+            {
+                "id": "e953142621abddc3",
+                "name": "Prunus avium",
+                "probability": 0.05210374,
+                "similar_images": [
+                    {
+                        "id": "c87c549b81f6bc2f6e7319013567fb086665c43e",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c87/c549b81f6bc2f6e7319013567fb086665c43e.jpeg",
+                        "similarity": 0.485,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c87/c549b81f6bc2f6e7319013567fb086665c43e.small.jpeg"
+                    },
+                    {
+                        "id": "0bd2b7966b70b194353491424809c3b439d829ce",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/0bd/2b7966b70b194353491424809c3b439d829ce.jpeg",
+                        "license_name": "CC BY-SA 4.0",
+                        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                        "citation": "Alain Bigou",
+                        "similarity": 0.379,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/0bd/2b7966b70b194353491424809c3b439d829ce.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "e953142621abddc3"
+                }
+            },
+            {
+                "id": "481d35e01c4f87f8",
+                "name": "Sambucus nigra",
+                "probability": 0.04998988,
+                "similar_images": [
+                    {
+                        "id": "c63f617fea4dd6f3879efb3dfb8e5539cfda21f1",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c63/f617fea4dd6f3879efb3dfb8e5539cfda21f1.jpeg",
+                        "license_name": "CC0",
+                        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                        "citation": "Stephen James McWilliam",
+                        "similarity": 0.373,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c63/f617fea4dd6f3879efb3dfb8e5539cfda21f1.small.jpeg"
+                    },
+                    {
+                        "id": "93cc908a9c4136896b30f84ef98b6d09b4b4949c",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/93c/c908a9c4136896b30f84ef98b6d09b4b4949c.jpeg",
+                        "similarity": 0.331,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/93c/c908a9c4136896b30f84ef98b6d09b4b4949c.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "481d35e01c4f87f8"
+                }
+            },
+            {
+                "id": "5120c58ccc34aa30",
+                "name": "Crataegus",
+                "probability": 0.039058432,
+                "similar_images": [
+                    {
+                        "id": "98667f0ecd0833fecd852fe08fc35c10b2a4bf20",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/986/67f0ecd0833fecd852fe08fc35c10b2a4bf20.jpeg",
+                        "license_name": "CC0",
+                        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                        "citation": "\u00c9tienne Lacroix-Carignan",
+                        "similarity": 0.348,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/986/67f0ecd0833fecd852fe08fc35c10b2a4bf20.small.jpeg"
+                    },
+                    {
+                        "id": "8e28318950074488d022e534f497be832105f348",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8e2/8318950074488d022e534f497be832105f348.jpeg",
+                        "similarity": 0.346,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8e2/8318950074488d022e534f497be832105f348.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "language": "en",
+                    "entity_id": "5120c58ccc34aa30"
+                }
+            }
+        ]
+    }
+}
+
+ Plant Health informations : 
+ {
+    "is_plant": {
+        "probability": 0.9995254,
+        "binary": true,
+        "threshold": 0.5
+    },
+    "is_healthy": {
+        "probability": 0.3717425465583801,
+        "binary": false,
+        "threshold": 0.525
+    },
+    "disease": {
+        "suggestions": [
+            {
+                "id": "7f22438065988f95",
+                "name": "Fungi",
+                "probability": 0.69689864,
+                "similar_images": [
+                    {
+                        "id": "9455af141073125e56f41890803070d92674092c",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/945/5af141073125e56f41890803070d92674092c.jpeg",
+                        "license_name": "CC BY 3.0",
+                        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+                        "citation": "Paul Bachi, University of Kentucky Research and Education Center, Bugwood.org ",
+                        "similarity": 0.504,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/945/5af141073125e56f41890803070d92674092c.small.jpeg"
+                    },
+                    {
+                        "id": "08b3f091153261659f018b778c32ce646338c6d3",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/08b/3f091153261659f018b778c32ce646338c6d3.jpg",
+                        "similarity": 0.413,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/08b/3f091153261659f018b778c32ce646338c6d3.small.jpg"
+                    }
+                ],
+                "details": {
+                    "local_name": "Champignons",
+                    "description": "Les champignons prennent l'\u00e9nergie des plantes sur lesquelles ils vivent, ce qui provoque des dommages \u00e0 la plante. Les infections fongiques sont responsables d'environ deux tiers des maladies infectieuses des plantes et provoquent des fl\u00e9trissements, des moisissures, des rouilles, des cro\u00fbtes, des tissus pourris et d'autres probl\u00e8mes.",
+                    "url": "https://fr.wikipedia.org/wiki/Fungi",
+                    "treatment": {
+                        "chemical": [
+                            "Si n\u00e9cessaire, appliquez un fongicide. Si vous ne connaissez pas l'esp\u00e8ce de champignon, choisissez le fongicide en fonction de la plante infect\u00e9e (par exemple, plante d'int\u00e9rieur, plante de jardin, arbre)."
+                        ],
+                        "biological": [
+                            "Si possible, enlevez et d\u00e9truisez les parties infect\u00e9es de la plante. Br\u00fblez-les, jetez-les \u00e0 la poubelle ou enterrez-les profond\u00e9ment. Ne faites pas de compost.",
+                            "Appliquer des produits \u00e9cologiques pour la protection des plantes (par exemple, huile de neem, bicarbonate de soude, savon)."
+                        ],
+                        "prevention": [
+                            "Utilisez des esp\u00e8ces et des cultivars r\u00e9sistants ainsi que des graines et des semis sains et certifi\u00e9s.",
+                            "Veillez \u00e0 avoir un bon drainage du sol pour \u00e9viter un arrosage excessif.",
+                            "Am\u00e9liorer la circulation de l'air autour de la plante (par exemple, en \u00e9laguant le feuillage excessif ou en augmentant l'espacement entre les plantes).",
+                            "\u00c9vitez le mouillage prolong\u00e9 des feuilles, qui peut \u00eatre caus\u00e9 par exemple par une irrigation par aspersion.",
+                            "Faites une rotation des cultures. \u00c9vitez de planter des cultures sensibles dans un sol infest\u00e9.",
+                            "D\u00e9sinfectez les outils, les pots de fleurs infect\u00e9s et les mains pour \u00e9viter la transmission de la maladie."
+                        ]
+                    },
+                    "classification": [],
+                    "common_names": null,
+                    "cause": null,
+                    "language": "fr",
+                    "entity_id": "7f22438065988f95"
+                }
+            },
+            {
+                "id": "76e471140b1b55e2",
+                "name": "Insecta",
+                "probability": 0.310363,
+                "similar_images": [
+                    {
+                        "id": "7eb1c29c42083e15cc857ace21ca026cfb1cc5ba",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/7eb/1c29c42083e15cc857ace21ca026cfb1cc5ba.jpg",
+                        "similarity": 0.426,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/7eb/1c29c42083e15cc857ace21ca026cfb1cc5ba.small.jpg"
+                    },
+                    {
+                        "id": "da4aab140097c9594db610d147c36b6412c73359",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/da4/aab140097c9594db610d147c36b6412c73359.jpg",
+                        "similarity": 0.389,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/da4/aab140097c9594db610d147c36b6412c73359.small.jpg"
+                    }
+                ],
+                "redundant": true,
+                "details": {
+                    "local_name": "insectes",
+                    "description": "La classe Insecta comprend de nombreux ravageurs importants des plantes, tels que les pucerons et les thrips. Les dommages peuvent \u00eatre caus\u00e9s \u00e0 la fois par les larves et les adultes. Ils peuvent causer des dommages alimentaires ou transmettre une infection bact\u00e9rienne, virale ou fongique.",
+                    "url": "https://fr.wikipedia.org/wiki/Insecte",
+                    "treatment": {
+                        "chemical": [
+                            "Si n\u00e9cessaire, appliquez un insecticide.",
+                            "Appliquer un insecticide appropri\u00e9 en fonction de l'esp\u00e8ce v\u00e9g\u00e9tale et de l'esp\u00e8ce d'insecte suspect\u00e9e."
+                        ],
+                        "biological": [
+                            "\u00c9liminez les parasites par des moyens m\u00e9caniques. Frottez les parasites, retirez les parties infest\u00e9es ou utilisez un fort jet d'eau pour enlever l'insecte.",
+                            "Appliquer des produits \u00e9cologiques pour la protection des plantes (par exemple, cartes adh\u00e9sives, huiles essentielles, huile horticole).",
+                            "Introduire des ennemis naturels - pr\u00e9dateurs, parasites ou maladies (par ex. coccinelles, Chrysoperla, gu\u00eapes parasito\u00efdes).",
+                            "Isolez imm\u00e9diatement la plante infest\u00e9e pour \u00e9viter la propagation de l'infestation."
+                        ],
+                        "prevention": [
+                            "Encouragez la pr\u00e9sence d'ennemis naturels (par ex. coccinelles, Chrysoperla, gu\u00eapes parasito\u00efdes).",
+                            "Appliquez un produit contre les insectes nuisibles hivernants.",
+                            "Inspectez les nouvelles plantes pour d\u00e9tecter les signes d'une infestation. Inspectez la face inf\u00e9rieure des feuilles et les articulations des tiges."
+                        ]
+                    },
+                    "classification": [
+                        "Animalia"
+                    ],
+                    "common_names": null,
+                    "cause": null,
+                    "language": "fr",
+                    "entity_id": "76e471140b1b55e2"
+                }
+            },
+            {
+                "id": "d24ebab7c0155e4b",
+                "name": "Animalia",
+                "probability": 0.30869293,
+                "similar_images": [
+                    {
+                        "id": "86e245639e3b95d5011d10d43cb31dfee5dbbba3",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/86e/245639e3b95d5011d10d43cb31dfee5dbbba3.jpg",
+                        "similarity": 0.388,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/86e/245639e3b95d5011d10d43cb31dfee5dbbba3.small.jpg"
+                    },
+                    {
+                        "id": "ce1c2e01f4171c6a91449e6587d475b4db2dcebe",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/ce1/c2e01f4171c6a91449e6587d475b4db2dcebe.jpg",
+                        "similarity": 0.385,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/ce1/c2e01f4171c6a91449e6587d475b4db2dcebe.small.jpg"
+                    }
+                ],
+                "redundant": true,
+                "details": {
+                    "local_name": "animaux nuisibles",
+                    "description": "Troubles induits par des organismes du r\u00e8gne animal. Ces organismes nuisibles causent des dommages directs en se nourrissant des feuilles, des tiges, des racines et d'autres parties de la plante ou en habitant les tissus v\u00e9g\u00e9taux. Les ravageurs peuvent \u00e9galement propager des maladies bact\u00e9riennes et virales.",
+                    "url": "https://fr.wikipedia.org/wiki/Animal",
+                    "treatment": {
+                        "chemical": [
+                            "Si n\u00e9cessaire, appliquez un insecticide ou un acaricide."
+                        ],
+                        "biological": [
+                            "\u00c9liminez les parasites par des moyens m\u00e9caniques. Frottez les parasites, retirez les parties infest\u00e9es ou utilisez un fort jet d'eau pour enlever l'insecte.",
+                            "Appliquer des produits \u00e9cologiques pour la protection des plantes (par exemple, cartes adh\u00e9sives, huiles essentielles, huile horticole).",
+                            "Introduire des ennemis naturels - pr\u00e9dateurs, parasites ou maladies (par ex. coccinelles, Chrysoperla, gu\u00eapes parasito\u00efdes).",
+                            "Isolez imm\u00e9diatement la plante infest\u00e9e pour \u00e9viter la propagation de l'infestation."
+                        ],
+                        "prevention": [
+                            "Encouragez la pr\u00e9sence d'ennemis naturels (par ex. coccinelles, Chrysoperla, gu\u00eapes parasito\u00efdes).",
+                            "Appliquez un produit contre les insectes nuisibles hivernants.",
+                            "Inspectez les nouvelles plantes pour d\u00e9tecter les signes d'une infestation. Inspectez la face inf\u00e9rieure des feuilles et les articulations des tiges."
+                        ]
+                    },
+                    "classification": [],
+                    "common_names": null,
+                    "cause": null,
+                    "language": "fr",
+                    "entity_id": "d24ebab7c0155e4b"
+                }
+            },
+            {
+                "id": "9c63240ac34d8dd3",
+                "name": "rust",
+                "probability": 0.2959089,
+                "similar_images": [
+                    {
+                        "id": "3d87cf255e2fd827c980515f528c517f3477be4b",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/3d8/7cf255e2fd827c980515f528c517f3477be4b.jpeg",
+                        "license_name": "CC BY 3.0",
+                        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+                        "citation": "Eric Coombs, Oregon Department of Agriculture, Bugwood.org ",
+                        "similarity": 0.542,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/3d8/7cf255e2fd827c980515f528c517f3477be4b.small.jpeg"
+                    },
+                    {
+                        "id": "9d4cef483264a7c393b70c4b69f61df4d5dcfe4c",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/9d4/cef483264a7c393b70c4b69f61df4d5dcfe4c.jpeg",
+                        "license_name": "CC BY 3.0",
+                        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+                        "citation": "Clemson University - USDA Cooperative Extension Slide Series , Bugwood.org ",
+                        "similarity": 0.508,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/9d4/cef483264a7c393b70c4b69f61df4d5dcfe4c.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "local_name": "rouille",
+                    "description": "Il s'agit d'un grand groupe de maladies fongiques communes dont les sympt\u00f4mes typiques sont des taches sur les feuilles qui se d\u00e9veloppent en structures productrices de spores appel\u00e9es pustules, de couleur variable.",
+                    "url": "https://fr.wikipedia.org/wiki/Pucciniales",
+                    "treatment": {
+                        "chemical": [
+                            "Si n\u00e9cessaire, appliquer un fongicide contenant de l'ac\u00e9tamipride (SGH07 : nocif).",
+                            "Si n\u00e9cessaire, appliquer un fongicide contenant du triticonazole (GHS09 : Environmental hazard) (sur les plantes ornementales d'ext\u00e9rieur)."
+                        ],
+                        "biological": [
+                            "Si possible, enlevez et d\u00e9truisez les parties infect\u00e9es de la plante. Br\u00fblez-les, jetez-les \u00e0 la poubelle ou enterrez-les profond\u00e9ment. Ne faites pas de compost.",
+                            "Appliquer des produits \u00e9cologiques pour la protection des plantes (par exemple, hydroxyde de cuivre pour les framboises et les groseilles, soufre en poudre)."
+                        ],
+                        "prevention": [
+                            "Utilisez des esp\u00e8ces et des cultivars r\u00e9sistants ainsi que des graines et des semis sains et certifi\u00e9s.",
+                            "\u00c9vitez le mouillage prolong\u00e9 des feuilles, qui peut \u00eatre caus\u00e9 par exemple par une irrigation par aspersion.",
+                            "Am\u00e9liorer la circulation de l'air autour de la plante (par exemple, en \u00e9laguant le feuillage excessif ou en augmentant l'espacement entre les plantes).",
+                            "D\u00e9sinfectez les outils, les pots de fleurs infect\u00e9s et les mains pour \u00e9viter la transmission de la maladie."
+                        ]
+                    },
+                    "classification": [
+                        "Fungi",
+                        "Basidiomycetes",
+                        "Pucciniomycotina",
+                        "Pucciniomycetes"
+                    ],
+                    "common_names": null,
+                    "cause": "Pucciniales",
+                    "language": "fr",
+                    "entity_id": "9c63240ac34d8dd3"
+                }
+            },
+            {
+                "id": "8c14a992fb987a96",
+                "name": "Viruses",
+                "probability": 0.22616763,
+                "similar_images": [
+                    {
+                        "id": "5c319174117300d55488038095b54ce908fbaa56",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/5c3/19174117300d55488038095b54ce908fbaa56.jpeg",
+                        "license_name": "CC BY 3.0",
+                        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+                        "citation": "Anette Phibbs, WI Department of Agriculture, Trade & Consumer Protection, Bugwood.org ",
+                        "similarity": 0.461,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/5c3/19174117300d55488038095b54ce908fbaa56.small.jpeg"
+                    },
+                    {
+                        "id": "d8d1f7bf8805f79780a2e5cc5e73f698c18c7b75",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/d8d/1f7bf8805f79780a2e5cc5e73f698c18c7b75.jpeg",
+                        "license_name": "CC BY 3.0",
+                        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+                        "citation": "Lesley Ingram, Bugwood.org ",
+                        "similarity": 0.435,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/d8d/1f7bf8805f79780a2e5cc5e73f698c18c7b75.small.jpeg"
+                    }
+                ],
+                "details": {
+                    "local_name": "Virus",
+                    "description": "Les maladies virales sont des troubles infectieux caus\u00e9s par de petits parasites intracellulaires, qui ont besoin de cellules h\u00f4tes pour survivre. Les virus sont g\u00e9n\u00e9ralement transmis aux plantes par des insectes et des acariens. Certains virus sont des agents pathog\u00e8nes graves pour les plantes, comme le virus de la rosette des roses ou le virus de la carie du tabac.",
+                    "url": "https://fr.wikipedia.org/wiki/Virus",
+                    "treatment": {
+                        "biological": [
+                            "Si possible, enlevez et d\u00e9truisez la plante infect\u00e9e. Br\u00fblez-les ou jetez-les \u00e0 la poubelle. Ne faites pas de compost."
+                        ],
+                        "prevention": [
+                            "\u00c9liminer les porteurs potentiels de maladies (par ex. Frankliniella, pucerons, Cicadellidae).",
+                            "D\u00e9sinfectez les outils, les pots de fleurs infect\u00e9s et les mains pour \u00e9viter la transmission de la maladie."
+                        ]
+                    },
+                    "classification": [],
+                    "common_names": null,
+                    "cause": null,
+                    "language": "fr",
+                    "entity_id": "8c14a992fb987a96"
+                }
+            },
+            {
+                "id": "bf75abeaaafd6c6f",
+                "name": "feeding damage by insects",
+                "probability": 0.21763006,
+                "similar_images": [
+                    {
+                        "id": "e6a33aeb053279fe6d7b9a28ad2e4bb4e4840da6",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e6a/33aeb053279fe6d7b9a28ad2e4bb4e4840da6.jpg",
+                        "similarity": 0.404,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e6a/33aeb053279fe6d7b9a28ad2e4bb4e4840da6.small.jpg"
+                    },
+                    {
+                        "id": "ba1f7dceb4b6919ddc16605dd429b86bc83ff456",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/ba1/f7dceb4b6919ddc16605dd429b86bc83ff456.jpg",
+                        "similarity": 0.376,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/ba1/f7dceb4b6919ddc16605dd429b86bc83ff456.small.jpg"
+                    }
+                ],
+                "details": {
+                    "local_name": "endommagement provoqu\u00e9 par les insectes voraces",
+                    "description": "Les dommages caus\u00e9s par les insectes comprennent des trous ou des encoches dans les feuilles, l'\u00e9limination des tissus entre les nervures des feuilles, des tunnels dans les tissus v\u00e9g\u00e9taux, la consommation des racines, etc.",
+                    "url": null,
+                    "treatment": {
+                        "chemical": [
+                            "Si n\u00e9cessaire, appliquez un insecticide."
+                        ],
+                        "biological": [
+                            "Appliquer des produits \u00e9cologiques pour la protection des plantes (par exemple, les sprays de savon, l'huile de neem, le savon horticole).",
+                            "Introduire des ennemis naturels - pr\u00e9dateurs, parasites ou maladies (par ex. coccinelles, Chrysoperla, gu\u00eapes parasito\u00efdes).",
+                            "Isolez imm\u00e9diatement la plante infest\u00e9e pour \u00e9viter la propagation de l'infestation."
+                        ],
+                        "prevention": [
+                            "Encouragez la pr\u00e9sence d'ennemis naturels (par ex. coccinelles, Chrysoperla, gu\u00eapes parasito\u00efdes).",
+                            "Appliquez un produit contre les insectes nuisibles hivernants.",
+                            "Inspectez les nouvelles plantes pour d\u00e9tecter les signes d'une infestation. Inspectez la face inf\u00e9rieure des feuilles et les articulations des tiges."
+                        ]
+                    },
+                    "classification": [
+                        "Animalia",
+                        "Insecta"
+                    ],
+                    "common_names": null,
+                    "cause": null,
+                    "language": "fr",
+                    "entity_id": "bf75abeaaafd6c6f"
+                }
+            },
+            {
+                "id": "53aac959aba8302b",
+                "name": "mechanical damage",
+                "probability": 0.2166082,
+                "similar_images": [
+                    {
+                        "id": "bfb871f7f3b9ee698f570bd273bae7487db3cc6d",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/bfb/871f7f3b9ee698f570bd273bae7487db3cc6d.jpg",
+                        "similarity": 0.402,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/bfb/871f7f3b9ee698f570bd273bae7487db3cc6d.small.jpg"
+                    },
+                    {
+                        "id": "1620cac7fec2f491cdc63c547752d042eb9c3699",
+                        "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/162/0cac7fec2f491cdc63c547752d042eb9c3699.jpg",
+                        "similarity": 0.324,
+                        "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/162/0cac7fec2f491cdc63c547752d042eb9c3699.small.jpg"
+                    }
+                ],
+                "details": {
+                    "local_name": "endommagement m\u00e9canique",
+                    "description": "Les dommages m\u00e9caniques se produisent lorsque des parties de la plante sont perturb\u00e9es par une action physique, g\u00e9n\u00e9ralement par des outils ou une manipulation inappropri\u00e9e. La blessure peut \u00eatre un point d'entr\u00e9e pour une maladie infectieuse ou perturber le transport de l'eau et des nutriments.",
+                    "url": null,
+                    "treatment": {
+                        "biological": [
+                            "Si possible, retirez les parties endommag\u00e9es de la plante. La blessure peut devenir un point d'entr\u00e9e pour les maladies infectieuses.",
+                            "Pour les arbres : si l'\u00e9corce est endommag\u00e9e, nettoyez les bords de la plaie et laissez-la expos\u00e9e \u00e0 l'air pour qu'elle s\u00e8che."
+                        ],
+                        "prevention": [
+                            "Pour les arbres : cr\u00e9ez des zones de protection autour de l'arbre (par exemple en construisant une petite cl\u00f4ture) pour \u00e9viter que le tronc et les racines ne soient bless\u00e9s par les \u00e9quipements de jardinage. \u00c9vitez d'utiliser des \u00e9quipements lourds autour des arbres."
+                        ]
+                    },
+                    "classification": [
+                        "Abiotic"
+                    ],
+                    "common_names": null,
+                    "cause": null,
+                    "language": "fr",
+                    "entity_id": "53aac959aba8302b"
+                }
+            }
+        ]
+    }
+}
