@@ -10,7 +10,6 @@ from openai import OpenAI
 import os
 import requests
 from azure.storage.blob import BlobServiceClient
-import time
 import json  # Assurez-vous d'importer le module json
 
 connect_str = "DefaultEndpointsProtocol=https;AccountName=stockagemodel;AccountKey=07kKsQiv6rWRfehHJ85CZPtF22UIffhvN5dHkv8ZpICq2mJABmL8G9XVJOQH8zRSxo+2vblw5Nw0+AStkw56cA==;EndpointSuffix=core.windows.net"
@@ -118,7 +117,7 @@ def predict2():
         # Informations à envoyer
         url = 'https://plant.id/api/v3/identification'
         headers = {
-            'Api-Key': 'ix3mM5zBTaJEOJH2qvxmkSvOfQ0wbzi6xWSDwHQysixfUGQkxN',
+            'Api-Key': os.getenv("PLANT_API_KEY"),
             'Content-Type': 'application/json'
         }
         body = {
@@ -127,7 +126,6 @@ def predict2():
             'longitude': 2.333,  # Paris
             'similar_images': True
         }
-
 
         global thread_principal_id
         thread_principal_id = create_thread()
@@ -139,18 +137,7 @@ def predict2():
         with open('App_results.txt', 'w') as file:
             file.write("Plant identification informations : \n "+formatted_identification)
 
-
         url = 'https://plant.id/api/v3/health_assessment?language=fr&details=local_name,description,url,treatment,classification,common_names,cause'
-        headers = {
-            'Api-Key': 'ix3mM5zBTaJEOJH2qvxmkSvOfQ0wbzi6xWSDwHQysixfUGQkxN',
-            'Content-Type': 'application/json'
-        }
-        body = {
-            'images': [encoded_image],
-            'latitude': 48.866,  # Paris
-            'longitude': 2.333,  # Paris
-            'similar_images': True
-        }
 
         response_health = requests.post(url, json=body, headers=headers)
         health_result = response_health.json().get('result', {})
