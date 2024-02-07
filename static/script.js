@@ -120,17 +120,18 @@ function predictDisease2() {
                 responseContainer.innerHTML = ''; // Effacer l'ancienne réponse
                 
                 if (data.identification.is_plant.binary === true) {
-                    var encryptedValue = encrypt(data.identification.classification.suggestions[0].name);
+                    var encryptedValue = encrypt(data.identification.classification.suggestions[0].name+'&'+data.health.disease.suggestions[0].name);
                     document.getElementById("chat-link").href = `/chat?predictedClass=${encryptedValue}`;
 
                     createAssistant()
 
                     var htmlContent = '<h2>Résultats de Prédiction</h2>';
                     htmlContent += '<p><strong>Plante prédite :</strong> ' + '<i>' + data.identification.classification.suggestions[0].name + '</i></p>';
+                    htmlContent += '<h3> Bonne santé :</h3> <i> <strong> Probabilité </strong> : '+ parseFloat(data.health.is_healthy.probability)*100.0 +' <i> </p>  ';
                     htmlContent += '<h3> Prédictions :</h3><ul>';
 
                     data.health.disease.suggestions.forEach(suggestion => {
-                        htmlContent += '<li><i> ' + suggestion.name + '</i> ( <strong>Probability: </strong>' + suggestion.probability + ')</li>';
+                        htmlContent += '<li><i> ' + suggestion.name + '</i> ( <strong>Probability: </strong>' + parseFloat(suggestion.probability)*100.0 + ')</li>';
                     });
 
                     htmlContent += '</ul>';

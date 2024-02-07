@@ -146,6 +146,7 @@ def predict2():
         with open('App_results.txt', 'a') as file:
             file.write("\n\n Plant Health informations : \n " + formatted_health)
 
+    
         return jsonify({
             'identification': identification_result,
             'health': health_result

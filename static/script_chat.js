@@ -11,7 +11,9 @@ var urlParams = new URLSearchParams(window.location.search);
 if (urlParams.has('predictedClass')) {
     var encryptedValue = urlParams.get('predictedClass');
     var decryptedValue = decrypt(encryptedValue);
-    document.getElementById("predictedClass").innerHTML = decryptedValue;
+    document.getElementById("predictedClass").innerHTML = decryptedValue.split('&')[0];
+    document.getElementById("predictedDisease").innerHTML = decryptedValue.split('&')[1];
+
 }
 
 const createChatLi = (message, className) => {
